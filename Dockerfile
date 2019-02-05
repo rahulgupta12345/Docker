@@ -4,4 +4,4 @@ RUN yum install -y \
     tomcat \
     mysql
 ADD sample.war /usr/local/tomcat/webapps/
-CMD ["/usr/sbin/tomcat","-D","FOREGROUND"]
+RUN sudo systemctl start tomcat
